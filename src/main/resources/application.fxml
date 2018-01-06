@@ -1,60 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lapots.breed.editor.fx.ApplicationController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="575.0"
+      xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lapots.breed.editor.fx.ApplicationController">
    <children>
       <VBox prefHeight="406.0" prefWidth="575.0">
          <children>
             <HBox prefHeight="406.0" prefWidth="701.0">
                <children>
-                  <VBox prefHeight="406.0" prefWidth="293.0">
-                     <children>
-                        <GridPane>
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="58.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="224.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Label text="Name" />
-                              <TextField fx:id="character_name" prefHeight="25.0" prefWidth="199.0" GridPane.columnIndex="1" />
-                           </children>
-                           <padding>
-                              <Insets left="10.0" right="10.0" top="10.0" />
-                           </padding>
-                        </GridPane>
-                     </children>
-                  </VBox>
-                  <Separator orientation="VERTICAL" prefHeight="200.0" />
-                  <VBox prefHeight="406.0" prefWidth="303.0">
-                     <children>
-                        <Label text="Current representation" />
-                        <Canvas fx:id="character_canvas" height="379.0" width="287.0">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                        </Canvas>
-                     </children>
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                  </VBox>
+                   <fx:include fx:id="playerOptions" source="playerOptions.fxml"/>
+                   <Separator orientation="VERTICAL" prefHeight="200.0" />
+                   <fx:include fx:id="playerAvatar" source="playerAvatar.fxml"/>
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">

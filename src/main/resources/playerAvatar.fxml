@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.geometry.Insets?>
+
+<VBox prefHeight="406.0" prefWidth="303.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.lapots.breed.editor.fx.controls.controller.CanvasDrawingController">
+    <children>
+        <Label text="Current representation" />
+        <Canvas fx:id="character_canvas" height="379.0" width="287.0">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+        </Canvas>
+    </children>
+    <padding>
+        <Insets top="5.0" />
+    </padding>
+</VBox>
