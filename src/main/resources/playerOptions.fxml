@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="406.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="com.lapots.breed.editor.fx.controls.controller.PlayerOptionsController">
+<VBox prefHeight="406.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lapots.breed.editor.fx.controls.controller.PlayerOptionsController">
     <children>
         <GridPane>
             <columnConstraints>
@@ -21,6 +23,8 @@
             <children>
                 <Label text="Name" />
                 <TextField fx:id="character_name" prefHeight="25.0" prefWidth="199.0" GridPane.columnIndex="1" />
+            <Label text="Height" GridPane.rowIndex="1" />
+            <TextField fx:id="character_height" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children>
             <padding>
                 <Insets left="10.0" right="10.0" top="10.0" />

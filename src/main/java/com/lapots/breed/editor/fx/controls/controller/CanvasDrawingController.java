@@ -12,6 +12,9 @@ import java.util.ResourceBundle;
 public class CanvasDrawingController implements Initializable {
 
     @FXML
+    private PlayerOptionsController controller;
+
+    @FXML
     private Canvas character_canvas;
     private GraphicsContext gc;
 

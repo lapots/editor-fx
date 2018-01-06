@@ -5,4 +5,5 @@ import lombok.Data;
 @Data
 public class PlayerCharacter {
     private String name;
+    private int height;
 }
