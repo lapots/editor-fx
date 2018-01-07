@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lapots.breed.editor.fx.ApplicationController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lapots.breed.editor.fx.ApplicationController">
    <children>
-      <VBox prefHeight="406.0" prefWidth="575.0">
+      <VBox prefHeight="358.0" prefWidth="577.0">
          <children>
-            <HBox prefHeight="406.0" prefWidth="701.0">
+            <HBox prefHeight="401.0" prefWidth="507.0">
                <children>
                    <fx:include fx:id="playerOptions" source="playerOptions.fxml" />
                    <Separator orientation="VERTICAL" prefHeight="445.0" prefWidth="1.0" />
