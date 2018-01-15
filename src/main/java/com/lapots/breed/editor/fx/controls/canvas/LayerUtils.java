@@ -2,6 +2,7 @@ package com.lapots.breed.editor.fx.controls.canvas;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
 public class LayerUtils {
@@ -28,5 +29,9 @@ public class LayerUtils {
             value--;
         }
         return value;
+    }
+
+    public static Color blankColor() {
+        return  Color.rgb(0, 0, 0, 0);
     }
 }
