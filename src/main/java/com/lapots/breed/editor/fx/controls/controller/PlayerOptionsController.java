@@ -4,11 +4,11 @@ import com.lapots.breed.editor.domain.PlayerCharacter;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+import static com.lapots.breed.editor.fx.controls.UiConstants.DEFAULT_CHAR_HEIGHT_CM;
+import static com.lapots.breed.editor.fx.controls.UiConstants.DEFAULT_CHAR_NAME;
 import static com.lapots.breed.editor.util.StringUtils.defaultIfBlank;
 
 public class PlayerOptionsController {
-    private static final String DEFAULT_CHAR_NAME = "Noname";
-    private static final int DEFAULT_CHAR_HEIGHT_CM = 180;
 
     @FXML
     private TextField character_name;

@@ -10,6 +10,8 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.lapots.breed.editor.fx.controls.UiConstants.LAYER_NAME_FORMAT;
+
 @Data
 public class LayerController {
     private static final Color DEFAULT_LAYER_COLOR = Color.WHITE;
@@ -42,7 +44,7 @@ public class LayerController {
             layer = LayerUtils.createBlankLayer(canvasPane.getPrefWidth(), canvasPane.getPrefHeight());
         }
 
-        layersList.add("Layer " + (layersList.size() + 1));
+        layersList.add(String.format(LAYER_NAME_FORMAT, layersList.size() + 1));
         canvasPane.getChildren().add(layer);
         layers.add(layer);
         return layer;

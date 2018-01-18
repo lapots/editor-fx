@@ -3,15 +3,13 @@ package com.lapots.breed.editor.fx.controls.canvas;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 
 import javax.annotation.PostConstruct;
 import java.util.stream.IntStream;
 
+import static com.lapots.breed.editor.fx.controls.UiConstants.*;
+
 public class GridLayerController {
-    private static final Color GRID_COLOR = Color.BLUE;
-    private static final int NUMBER_OF_LINES = 8;
-    private static final int LINE_WIDTH = 1;
     private Canvas gridLayer;
     private boolean showGrid;
 
@@ -22,15 +20,15 @@ public class GridLayerController {
     @PostConstruct
     private void init(Pane pane) {
         gridLayer =
-                LayerUtils.createColoredLayer(pane.getPrefWidth(), pane.getPrefHeight(), LayerUtils.blankColor());
+                LayerUtils.createColoredLayer(pane.getPrefWidth(), pane.getPrefHeight(), BLANK_COLOR);
         GraphicsContext gc = gridLayer.getGraphicsContext2D();
-        gc.setStroke(GRID_COLOR);
-        gc.setLineWidth(LINE_WIDTH);
+        gc.setStroke(DEFAULT_GRID_COLOR);
+        gc.setLineWidth(GRID_LINE_WIDTH);
 
-        double averageHeight = LayerUtils.nearestDivision(gridLayer.getHeight(), NUMBER_OF_LINES);
-        double heightItem = averageHeight / NUMBER_OF_LINES;
+        double averageHeight = LayerUtils.nearestDivision(gridLayer.getHeight(), GRID_LINES_NUMBER);
+        double heightItem = averageHeight / GRID_LINES_NUMBER;
         IntStream.iterate(1, x -> x + 1)
-                .limit(NUMBER_OF_LINES - 2)
+                .limit(GRID_LINES_NUMBER - 2)
                 .forEach(x ->
                         gc.strokeLine(0, x * heightItem, gridLayer.getWidth(), x * heightItem)
                 );
