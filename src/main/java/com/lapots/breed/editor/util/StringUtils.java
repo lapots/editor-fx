@@ -8,7 +8,7 @@ public class StringUtils {
 
     // TODO: move to IntegerUtils or NumberUtils?
     public static int defaultIfBlank(String field, int defaultValue) {
-        return isBlank(field) ? defaultValue : Integer.valueOf(field);
+        return isBlank(field) ? defaultValue : Integer.valueOf(field.split("\\.", 2)[0]);
     }
 
     public static boolean isBlank(String field) {

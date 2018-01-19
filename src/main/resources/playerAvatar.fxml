@@ -16,10 +16,13 @@
          <children>
             <ComboBox fx:id="layersBox" prefWidth="150.0" />
             <Button fx:id="addLayer" mnemonicParsing="false" onAction="#handleAddLayer" text="Add layer" />
-            <CheckBox mnemonicParsing="false" onAction="#handleGridEnableDisable" text="show grid" selected="true"/>
+            <CheckBox mnemonicParsing="false" onAction="#handleGridEnableDisable" selected="true" text="show grid" />
          </children>
       </HBox>
-      <Pane fx:id="canvasPane" prefHeight="280.0" prefWidth="280.0" />
+      <Pane fx:id="canvasPane" prefHeight="280.0" prefWidth="280.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Pane>
     </children>
     <padding>
         <Insets top="5.0" />
