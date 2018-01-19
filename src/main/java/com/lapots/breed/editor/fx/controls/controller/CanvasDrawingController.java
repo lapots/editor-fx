@@ -1,8 +1,6 @@
 package com.lapots.breed.editor.fx.controls.controller;
 
 import com.lapots.breed.editor.fx.controls.canvas.LayerController;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -30,7 +28,6 @@ public class CanvasDrawingController implements Initializable {
                     layerController.toFront(newValue.intValue());
                 });
         layersBox.getSelectionModel().selectFirst();
-        layerController.checkGridAndSet();
     }
 
     @FXML
@@ -41,6 +38,6 @@ public class CanvasDrawingController implements Initializable {
 
     @FXML
     private void handleGridEnableDisable(ActionEvent event) {
-        layerController.checkGridAndSet();
+        layerController.setGridVisibility();
     }
 }

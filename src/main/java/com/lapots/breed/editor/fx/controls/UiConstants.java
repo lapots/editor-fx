@@ -10,4 +10,5 @@ public class UiConstants {
     public static final Color DEFAULT_GRID_COLOR = Color.BLUE;
     public static final int GRID_LINES_NUMBER = 8;
     public static final int GRID_LINE_WIDTH = 1;
+    public static final Color DEFAULT_LAYER_COLOR = Color.WHITE;
 }
