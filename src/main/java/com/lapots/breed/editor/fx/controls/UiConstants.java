@@ -16,4 +16,6 @@ public class UiConstants {
     public static final int CHARACTER_LINE_WIDTH = 2;
     public static final Color CHARACTER_LINE_COLOR = Color.RED;
     public static final int MAX_HEIGHT = 200;
+    public static final int DEFAULT_MARGIN = 10;
+    public static final int OVAL_WIDTH = 25;
 }

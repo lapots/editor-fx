@@ -45,12 +45,12 @@ public class GridLayer extends AbstractCanvasWrapper {
         gc.setTextAlign(TextAlignment.CENTER);
         gc.setTextBaseline(VPos.CENTER);
         gc.setFill(Color.RED);
-        gc.fillText(String.valueOf(MAX_HEIGHT), 10, heightItem - 10);
+        gc.fillText(String.valueOf(MAX_HEIGHT), DEFAULT_MARGIN, heightItem - DEFAULT_MARGIN);
 
         gc.setTextAlign(TextAlignment.LEFT);
         gc.setTextBaseline(VPos.CENTER);
         gc.setFill(Color.RED);
-        gc.fillText("0", 0, pane.getPrefHeight() - heightItem - 10);
+        gc.fillText("0", 0, pane.getPrefHeight() - heightItem - DEFAULT_MARGIN);
 
         setCanvas(layer);
     }

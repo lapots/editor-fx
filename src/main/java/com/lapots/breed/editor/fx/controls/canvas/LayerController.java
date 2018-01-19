@@ -24,7 +24,6 @@ public class LayerController {
     public LayerController(Pane pane) {
         canvasPane = pane;
 
-        // addEmptyLayer(); // initial layer
         grid = new GridLayer(canvasPane);
         grid.show();
 

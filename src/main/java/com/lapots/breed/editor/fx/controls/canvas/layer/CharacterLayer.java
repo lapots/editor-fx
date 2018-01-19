@@ -24,8 +24,8 @@ public class CharacterLayer extends AbstractCanvasWrapper {
 
         double middle = layer.getWidth() / 2;
         double averageHeight = MathUtils.nearestDivision(layer.getHeight(), GRID_LINES_NUMBER);
-        gc.strokeOval(middle - 12.5, averageHeight / GRID_LINES_NUMBER,
-                25, averageHeight / GRID_LINES_NUMBER);
+        gc.strokeOval(middle - (OVAL_WIDTH / 2), averageHeight / GRID_LINES_NUMBER,
+                OVAL_WIDTH, averageHeight / GRID_LINES_NUMBER);
 
         setCanvas(layer);
     }
