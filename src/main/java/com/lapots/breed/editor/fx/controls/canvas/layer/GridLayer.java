@@ -14,6 +14,7 @@ import java.util.stream.IntStream;
 
 import static com.lapots.breed.editor.fx.controls.UiConstants.*;
 
+// TODO: rethink ability to freely drawing on different grid lines
 public class GridLayer extends AbstractCanvasWrapper {
     public GridLayer(Pane pane) {
         super(pane);
