@@ -5,7 +5,7 @@ import com.lapots.breed.editor.fx.controls.canvas.layer.EmptyLayer;
 import com.lapots.breed.editor.fx.controls.canvas.layer.GridLayer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.layout.Pane;;
+import javafx.scene.layout.Pane;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -35,25 +35,31 @@ public class LayerController {
         layers.add(new EmptyLayer(canvasPane));
         layersList.add(String.format(LAYER_NAME_FORMAT, layersList.size() + 1));
 
-        if (grid.isVisible()) { grid.show(); }
-        if (character.isVisible()) { character.show(); }
+        checkVisibility();
     }
 
     public void toFront(int index) {
         layers.get(index).show();
 
-        if (grid.isVisible()) { grid.show(); }
-        if (character.isVisible()) { character.show(); }
+        checkVisibility();
     }
 
     public void setGridVisibility() {
-        if (grid.isVisible()) { grid.hide(); }
-        else { grid.show(); }
+        checkAndSetVisibility(grid);
     }
 
     // not sure if needed
     public void setCharacterVisibility() {
-        if (character.isVisible()) { character.hide(); }
-        else { character.show(); }
+        checkAndSetVisibility(character);
+    }
+
+    private void checkAndSetVisibility(AbstractCanvasWrapper layer) {
+        if (layer.isVisible()) { layer.hide(); }
+        else { layer.show(); }
+    }
+
+    private void checkVisibility() {
+        if (grid.isVisible()) { grid.show(); }
+        if (character.isVisible()) { character.show(); }
     }
 }
